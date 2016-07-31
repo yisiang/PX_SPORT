@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <WebView
+        android:id="@+id/sa_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+    </WebView>
+    <com.truizlop.fabreveallayout.FABRevealLayout
+        android:id="@+id/fab_reveal_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.8"
+        >
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lightbulb"
+            />
+
+        <RelativeLayout
+            android:id="@+id/main_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/car_dashboard"
+            android:paddingLeft="60dp"
+            android:paddingRight="10dp"
+            android:paddingTop="35dp"
+            android:paddingBottom="50dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="27dp"
+                android:textColor="@color/md_white_1000"
+                android:id="@+id/sa_mileage"
+                android:layout_alignParentBottom="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="30dp"
+                android:textColor="@color/md_white_1000"
+                android:id="@+id/sa_speed"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textSize="27dp"
+                android:textColor="@color/md_white_1000"
+                android:id="@+id/sa_time"
+                android:layout_alignParentRight="true"
+                />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/secondary_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/blue_background"
+            >
+            <ImageView
+                android:id="@+id/sa_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/arrow_left_bold_circle"
+                android:layout_gravity="center_vertical"
+                android:onClick="bikingLeftLight"
+                />
+
+            <ImageView
+                android:id="@+id/sa_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/arrow_right_bold_circle"
+                android:layout_gravity="center_vertical"
+                android:onClick="bikingRightLight"
+                />
+        </LinearLayout>
+
+    </com.truizlop.fabreveallayout.FABRevealLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/sa_button_background"
+        >
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sc_pause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pause"
+            app:backgroundTint="@color/gold" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sc_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stop"
+            app:backgroundTint="@color/darkred"
+            />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sc_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/play"
+            app:backgroundTint="@color/limegreed"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>

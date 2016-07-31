@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/login_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PX SPORT"
+        android:textSize="50dp"
+        android:textColor="#FDFDFD"
+        android:gravity="center"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="100dp"
+        />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/login_logo"
+        />
+    <EditText
+        android:id="@+id/passwd"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/email"
+        />
+    <Button
+        android:id="@+id/login_login_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:onClick="login"
+        android:text="登入"
+        android:textSize="18dp"
+        android:layout_below="@id/passwd"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="註冊"
+        android:onClick="register"
+        android:textSize="18dp"
+        android:layout_below="@id/login_login_btn"
+        android:layout_centerHorizontal="true"
+        />
+</RelativeLayout>

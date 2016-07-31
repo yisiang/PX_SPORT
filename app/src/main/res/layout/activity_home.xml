@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/ha_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/home_background"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/ha_myToorBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#6BBBD7"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        />
+
+    <!--<ImageView-->
+        <!--android:id="@+id/img"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--/>-->
+    <FrameLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <me.crosswall.lib.coverflow.core.LinkagePagerContainer
+                android:id="@+id/ha_pager_container"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+            >
+                <!--上-->
+                <android.support.v4.view.LinkagePager
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    />
+            </me.crosswall.lib.coverflow.core.LinkagePagerContainer>
+
+            <!--下-->
+            <android.support.v4.view.LinkagePager
+                android:id="@+id/ha_bottom_pager"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:velocity="150"
+                android:layout_below="@id/ha_pager_container"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="開始"
+                android:textSize="18dp"
+                android:layout_alignParentBottom="true"
+                android:onClick="startSport"
+                android:backgroundTint="#938A89"
+                />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>
+

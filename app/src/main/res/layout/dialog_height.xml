@@ -1,0 +1,63 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <!--水平線-->
+    <LinearLayout
+        android:id="@+id/height_divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/divider"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        >
+    </LinearLayout>
+
+    <!--NumberPicker 身高-->
+    <LinearLayout
+        android:id="@+id/height_picker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/height_divider"
+        android:gravity="center"
+        >
+        <NumberPicker
+            android:id="@+id/height_tall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CM"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
+    <!--Button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/height_picker_layout"
+        >
+        <Button
+            android:id="@+id/height_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="確定"
+            android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/height_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+</RelativeLayout>

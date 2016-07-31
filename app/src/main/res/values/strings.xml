@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">project</string>
+
+    <!-- Navication Drawer Item -->
+    <string name="drawer_item_personal">個人資料</string>
+    <string name="drawer_item_record">我的紀錄</string>
+    <string name="drawer_item_leaderboard">排行榜</string>
+    <string name="drawer_item_bikecheck">車燈檢查</string>
+    <string name="drawer_item_second_settings">BBB</string>
+
+    <!--Facebook APP ID-->
+    <string name="facebook_app_id">1051652231586958</string>
+</resources>
