@@ -154,7 +154,6 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
     }
 
     //權限回應
@@ -247,10 +246,10 @@ public class HomeActivity extends AppCompatActivity {
                             return;
                         }
                     }
-                    dialog.dismiss();
-                    hanlder.sendEmptyMessage(1);
-                    unregisterReceiver(receiver);
                 }
+                dialog.dismiss();
+                hanlder.sendEmptyMessage(1);
+                unregisterReceiver(receiver);
             }
         }, 12 * 1000);
 
